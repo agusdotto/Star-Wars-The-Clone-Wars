@@ -1,0 +1,46 @@
+.lb-outerContainer {
+    position: relative;
+}
+
+.lb-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.lb-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.lb-prev, .lb-next {
+    position: static;
+    transform: none;
+    margin: 0 10px;
+}
+
+.lb-prev {
+    left: -40px;
+}
+
+.lb-next {
+    right: -40px;
+}
+
+.lb-number {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem !important;
+    color: #fff;
+    z-index: 9999;
+}

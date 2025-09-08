@@ -1,0 +1,294 @@
+/* ============================================= */
+/* ESTILOS GENERALES Y VARIABLES CSS */
+/* ============================================= */
+:root {
+  --color-principal: #ffe81f; /* Amarillo Star Wars */
+  --color-fondo: #000000; /* Negro */
+  --color-texto: #e0e0e0; /* Gris claro para texto legible */
+  --fuente-titulos: "Orbitron", sans-serif;
+}
+
+/* Reset básico y configuración del box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Evita espacios extra debajo de las imágenes */
+}
+
+/* ============================================= */
+/* CABECERA (HEADER) */
+/* ============================================= */
+.site-header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex; /* Activamos Flexbox */
+  justify-content: space-between; /* Espacio entre logo y nav */
+  align-items: center; /* Centrado vertical */
+  border-bottom: 2px solid var(--color-principal);
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+}
+
+.site-header .logo img {
+  height: 100px; /* Altura aumentada otro 50% (65px * 1.5) */
+  margin-left: 1rem;
+}
+
+.site-header .main-nav ul {
+  list-style: none; /* Quitamos los puntos de la lista */
+  display: flex; /* Ponemos los elementos en línea */
+  gap: 3rem; /* Espacio entre elementos del menú */
+  margin-right: 4rem;
+}
+
+.site-header .main-nav a {
+  font-family: "Orbitron";
+  font-weight: 700;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  position: relative; /* Necesario para el pseudo-elemento ::after */
+}
+
+/* Efecto de subrayado en el hover */
+.site-header .main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-principal);
+  transition: width 0.3s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: #fff;
+}
+
+.site-header .main-nav a:hover::after {
+  width: 100%;
+}
+
+/* ============================================= */
+/* MENÚ HAMBURGUESA (ESTILOS ADICIONALES) */
+/* ============================================= */
+.hamburger-menu {
+  display: none; /* Oculto por defecto en escritorio */
+  background: none;
+  border: none;
+  color: var(--color-principal);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001; /* Asegura que esté por encima de otros elementos */
+}
+
+/* ============================================= */
+/* CONTENIDO PRINCIPAL (MAIN) */
+/* ============================================= */
+.main-content {
+  padding: 2rem;
+  display: flex; /* Activamos Flexbox para las dos columnas */
+  gap: 2rem; /* Espacio entre las columnas */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-grow: 1; /* Hace que el contenido principal crezca para empujar el footer hacia abajo */
+}
+
+/* Estilo para ambas columnas (izquierda y derecha) */
+.main-content > section {
+  flex: 1; /* Cada columna ocupa el 50% del espacio disponible */
+  min-width: 300px; /* Ancho mínimo para evitar que se aplasten demasiado */
+}
+
+.intro-text p {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: "Akaya Telivigala";
+  font-size: 1.3rem; /* Aumentamos un poco el tamaño para mejorar la legibilidad de esta fuente */
+}
+
+.intro-image img {
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 232, 31, 0.5); /* Sombra amarilla sutil */
+}
+
+.secondary-image {
+  margin-top: 2rem;
+  border-radius: 8px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.secondary-text {
+  margin-top: 2rem;
+}
+
+.secondary-text h2 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+
+.secondary-text p {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: "Akaya Telivigala";
+  font-size: 1.3rem;
+}
+
+/* ============================================= */
+/* PIE DE PÁGINA (FOOTER) */
+/* ============================================= */
+.site-footer {
+  background-color: #111;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  display: flex; /* Activamos Flexbox */
+  justify-content: space-between; /* Espacio entre legales y redes */
+  align-items: center; /* Centrado vertical */
+  border-top: 2px solid var(--color-principal);
+  font-size: 0.9rem;
+  flex-wrap: wrap; /* Permite que los elementos se reorganicen */
+  gap: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2.5rem; /* Espacio entre iconos */
+}
+
+.social-icons a {
+  font-size: 1.7rem;
+  color: var(--color-texto);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--color-principal);
+  transform: scale(1.2); /* Efecto de zoom al pasar el ratón */
+}
+
+
+
+/* ============================================= */
+/* DISEÑO RESPONSIVE (MEDIA QUERIES) */
+/* ============================================= */
+@media (max-width: 768px) {
+  /* Apila los elementos de la cabecera y los centra */
+  .site-header {
+    flex-direction: row; /* Mantenemos la dirección de fila */
+    justify-content: space-between; /* Espacio entre logo y hamburguesa */
+    align-items: center;
+    position: relative; /* Para posicionar el menú desplegable */
+  }
+
+  .main-nav {
+    display: none; /* Ocultamos la navegación por defecto */
+    position: absolute;
+    top: 100%; /* Justo debajo de la cabecera */
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c; /* Fondo ligeramente diferente para el menú */
+    border-top: 1px solid var(--color-principal);
+    padding: 1rem 0;
+  }
+
+  .main-nav.is-active {
+    display: block; /* Mostramos el menú cuando está activo */
+  }
+
+  .main-nav ul {
+    flex-direction: column; /* Apilamos los enlaces verticalmente */
+    align-items: center; /* Centramos los enlaces */
+    width: 100%;
+  }
+
+  .main-nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav a {
+    padding: 1rem 0;
+    width: 100%;
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block; /* Mostramos el botón de hamburguesa en móvil */
+  }
+
+  /* Apila las dos columnas del contenido principal */
+  .main-content {
+    flex-direction: column;
+  }
+
+  /* Reordenamiento de imágenes en la página de inicio para móvil */
+  /* Usamos :not() para que no afecte a la página de contacto */
+  .main-content:not(.main-content-contacto) .intro-text,
+  .main-content:not(.main-content-contacto) .intro-image {
+    display: contents;
+  }
+
+  .text-block-1 {
+    order: 1;
+  }
+
+  .main-intro-image {
+    order: 2; /* Imagen principal ahora va segunda */
+  }
+
+  .secondary-image {
+    order: 3; /* Imagen de clones ahora va tercera */
+  }
+
+  .secondary-text {
+    order: 4;
+  }
+
+  /* Centra los elementos del pie de página y los apila */
+  .site-footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .site-footer .legal-info {
+    order: 2;
+  }
+
+  .site-footer .social-icons {
+    order: 1;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
