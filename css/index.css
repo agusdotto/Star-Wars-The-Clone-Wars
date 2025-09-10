@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .home-page .intro-text,
+  .home-page .intro-image {
+    display: contents;
+  }
+
+  .home-page .text-block-1 {
+    order: 1;
+  }
+
+  .home-page .main-intro-image {
+    order: 2;
+  }
+
+  .home-page .secondary-text {
+    order: 3;
+  }
+
+  .home-page .secondary-image {
+    order: 4;
+  }
+}

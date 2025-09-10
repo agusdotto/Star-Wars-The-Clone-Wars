@@ -250,30 +250,7 @@ img {
     flex-direction: column;
   }
 
-  /* Reordenamiento de imágenes en la página de inicio para móvil */
-  /* Usamos :not() para que no afecte a la página de contacto */
-  .main-content:not(.main-content-contacto) .intro-text,
-  .main-content:not(.main-content-contacto) .intro-image {
-    display: contents;
-  }
-
-  .text-block-1 {
-    order: 1;
-  }
-
-  .main-intro-image {
-    order: 2; /* Imagen principal ahora va segunda */
-  }
-
-  .secondary-text {
-    order: 3;
-  }
-
-  .secondary-image {
-    order: 4; /* Imagen de clones ahora va cuarta */
-  }
-
-  /* Centra los elementos del pie de página y los apila */
+  
   .site-footer {
     flex-direction: column;
     justify-content: center;
