@@ -265,12 +265,12 @@ img {
     order: 2; /* Imagen principal ahora va segunda */
   }
 
-  .secondary-image {
-    order: 3; /* Imagen de clones ahora va tercera */
+  .secondary-text {
+    order: 3;
   }
 
-  .secondary-text {
-    order: 4;
+  .secondary-image {
+    order: 4; /* Imagen de clones ahora va cuarta */
   }
 
   /* Centra los elementos del pie de página y los apila */
