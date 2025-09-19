@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - Star Wars: The Clone Wars</title>
+    <title>Star Wars: The Clone Wars - Temporada 6</title>
 
+    <!-- Google Fonts: Orbitron para un estilo "Sci-Fi" -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,10 +30,13 @@
     />
 
     <!-- Hoja de estilos CSS personalizada -->
-     <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
-     <link rel="stylesheet" href="css/contacto.css" type="text/css">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+
+    <!-- Script para las funcionalidades-->
+    <script src="js/main.js"></script>
   </head>
-  <body>
+  <body class="home-page">
     <!-- ============================================= -->
     <!-- CABECERA -->
     <!-- ============================================= -->
@@ -68,60 +72,12 @@
       </nav>
     </header>
 
-    <main class="main-content main-content-contacto">
-      <h1>Contáctanos</h1>
-      <div class="contact-container">
-        <!-- Columna Izquierda: Información y Mapa -->
-        <section class="contact-info-section">
-          <h2>Nuestros Datos</h2>
-          <div class="contact-details">
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              <strong>Dirección:</strong> 1000 Republica Way, Galactic City,
-              Coruscant
-            </p>
-            <p>
-              <i class="fas fa-phone"></i>
-              <strong>Teléfono:</strong> +1 (555) JEDI-ORD
-            </p>
-          </div>
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.433939690839!2d-122.4511078241519!3d37.78071627198135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586d3af294b43%3A0x44c61bb690f7033f!2sLucasfilm%20Ltd!5e0!3m2!1ses!2ses!4v1701191319623!5m2!1ses!2ses"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </section>
-
-        <!-- Columna Derecha: Formulario -->
-        <section class="contact-form-section">
-          <h2>Envíanos un Mensaje</h2>
-          <form action="#" method="POST">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required />
-            </div>
-            <div class="form-group">
-              <label for="apellido">Apellido</label>
-              <input type="text" id="apellido" name="apellido" placeholder="Su apellido" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="su.email@ejemplo.com" required />
-            </div>
-            <div class="form-group">
-              <label for="consulta">Motivo de su consulta</label>
-              <textarea id="consulta" name="consulta" rows="5" placeholder="Escribe aquí tu consulta..." required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </div>
+    <!-- ============================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ============================================= -->
+    <main class="main-content">
+      <h1>Temporada 6</h1>
+      <p>Contenido de la temporada 6...</p>
     </main>
 
     <!-- ============================================= -->
@@ -140,7 +96,7 @@
           aria-label="Facebook"
           ><i class="fab fa-facebook-f"></i
         ></a>
-        <a href="https://x.com/starwars" aria-label="X" target="_blank"
+        <a href="https://x.com/starwars" target="_blank" aria-label="X"
           ><i class="fab fa-x-twitter"></i
         ></a>
         <a href="https://www.instagram.com/starwars/" target="_blank" aria-label="Instagram"
@@ -151,8 +107,5 @@
         ></a>
       </div>
     </footer>
-
-    <!-- Script para las funcionalidades-->
-    <script src="js/main.js"></script>
   </body>
 </html>
