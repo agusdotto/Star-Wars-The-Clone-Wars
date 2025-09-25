@@ -145,10 +145,13 @@ img {
 /* ============================================= */
 .main-content {
   padding: 2rem;
+  flex-grow: 1; /* Hace que el contenido principal crezca para empujar el footer hacia abajo */
+}
+
+.home-page .main-content {
   display: flex; /* Activamos Flexbox para las dos columnas */
   gap: 2rem; /* Espacio entre las columnas */
   align-items: center; /* Centra el contenido verticalmente */
-  flex-grow: 1; /* Hace que el contenido principal crezca para empujar el footer hacia abajo */
 }
 
 /* Estilo para ambas columnas (izquierda y derecha) */
@@ -200,7 +203,7 @@ img {
 .site-footer {
   background-color: #111;
   padding: 1.5rem 2rem;
-  margin-top: 2rem;
+  margin-top: auto; /* Empuja el footer al final */
   display: flex; /* Activamos Flexbox */
   justify-content: space-between; /* Espacio entre legales y redes */
   align-items: center; /* Centrado vertical */
@@ -298,5 +301,21 @@ img {
 
   .contact-container {
     flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dropdown-content a {
+    text-align: center;
   }
 }

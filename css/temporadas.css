@@ -1,0 +1,33 @@
+/* Estilos para las páginas de las temporadas */
+.temporada-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.columna-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.columna-imagen {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-texto p,
+.columna-texto li {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 1.3rem;
+}
+
+.columna-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
