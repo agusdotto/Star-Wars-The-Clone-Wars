@@ -22,12 +22,19 @@
 .columna-texto p,
 .columna-texto li {
   font-family: "Akaya Telivigala", cursive;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.columna-texto p,
+.columna-texto ul {
+  margin-bottom: 2rem;
 }
 
 .columna-imagen img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 232, 31, 0.5); /* Sombra amarilla sutil */
 }
