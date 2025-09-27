@@ -44,3 +44,20 @@
     color: #fff;
     z-index: 9999;
 }
+
+/* Remove white border from lightbox image */
+.lb-container {
+    padding: 0 !important;
+}
+
+.lb-outerContainer {
+    background-color: transparent !important;
+}
+
+/* Remove border and fade-in animation from lightbox image */
+.lb-image {
+    border: none !important;
+    border-radius: 0 !important;
+    transition: none !important;
+    animation: none !important;
+}
