@@ -86,16 +86,8 @@
               <strong>Teléfono:</strong> +1 (555) JEDI-ORD
             </p>
           </div>
-          <div class="map-container">
-                        <iframe
-              width="600"
-              height="450"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?q=Universidad+Tecnológica+Nacional+Facultad+Regional+Haedo"
-            ></iframe>
+          <div id="map" class="map-container" style="height: 350px; width: 100%;">
+            <!-- El mapa de Google se cargará aquí -->
           </div>
         </section>
 
@@ -121,7 +113,7 @@
             </div>
             <button type="submit">Enviar</button>
           </form>
-        </div>
+        </section>
       </div>
     </main>
 
@@ -155,5 +147,25 @@
 
     <!-- Script para las funcionalidades-->
     <script src="js/main.js"></script>
+
+    <!-- Google Maps -->
+    <script>
+      function initMap() {
+        // Coordenadas para UTN Haedo
+        const utnHaedo = { lat: -34.640556, lng: -58.601944 };
+        // Crea el mapa
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: utnHaedo,
+        });
+        // Crea un marcador en la posición
+        const marker = new google.maps.Marker({
+          position: utnHaedo,
+          map: map,
+          title: "UTN Facultad Regional Haedo"
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD54Jn3iQqbpeH8aTrlgH4hxLYnx7SW4Uw&callback=initMap"></script>
   </body>
 </html>
